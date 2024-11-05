@@ -7530,15 +7530,7 @@ a.anchor-link {
 <a href="https://colab.research.google.com/github/CienciaDeDatosEspacial/GeoDataFrame_SpatialOperation/blob/main/GeoDF_Operations.ipynb" target="_blank">
 <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </img></a>
-<h1 id="Basic-spatial-operations-in--Geo-Dataframes">Basic spatial operations in  Geo Dataframes<a class="anchor-link" href="#Basic-spatial-operations-in--Geo-Dataframes">¶</a></h1><p>We will review some important operations for geodataframes. As usual, let's do this:</p>
-<ol>
-<li>Create a repository named: <strong>geodf_operations</strong>.</li>
-<li>Clone that repo to a local folder in your computer.</li>
-<li>In that local folder in your computer, create a folder named <strong>maps</strong> and <strong>data</strong>.</li>
-<li>Download the shapefile of "Brazil - Subnational Administrative Boundaries"(bra_adm_ibge_2020_SHP.zip) from <a href="https://data.humdata.org/dataset/cod-ab-bra">here</a> and save it in the maps folder (you need to unzip the file).</li>
-<li>Download a <strong>CSV</strong> file with information on the airports in Brazil from this <a href="https://data.humdata.org/dataset/ourairports-bra">website</a>, Save it in my <strong>data</strong> folder:</li>
-<li>Commit and push.</li>
-</ol>
+<h1 id="Basic-spatial-operations-in--Geo-Dataframes">Basic spatial operations in  Geo Dataframes<a class="anchor-link" href="#Basic-spatial-operations-in--Geo-Dataframes">¶</a></h1><p>We will review some important operations for geodataframes.</p>
 </div>
 </div>
 </div>
@@ -7550,6 +7542,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Let's remember the contents of the world map from last session:</p>
+<p><a class="anchor" id="0"></a></p>
 </div>
 </div>
 </div>
@@ -7579,7 +7572,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Let's open all the layers</p>
+<p>Let's open all the layers (this takes a minute):</p>
 </div>
 </div>
 </div>
@@ -7607,11 +7600,9 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><a class="anchor" id="0"></a></p>
 <p>Now, let's see some important spatial operations:</p>
 <ol>
 <li><a href="#1">Subsetting</a></li>
-<li><a href="#2">Projections</a></li>
 <li><a href="#3">Combining GeoDF rows</a></li>
 <li><a href="#4">The convex hull</a></li>
 <li><a href="#5">Spatial Overlays</a></li>
@@ -7628,7 +7619,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><a class="anchor" id="1"></a></p>
-<h1 id="Subsetting">Subsetting<a class="anchor-link" href="#Subsetting">¶</a></h1><h2 id="Filtering">Filtering<a class="anchor-link" href="#Filtering">¶</a></h2><p>You can keep some elements by subsetting by <em>filtering</em>, as we used to do n common pandas data frames.</p>
+<h1 id="Subsetting">Subsetting<a class="anchor-link" href="#Subsetting">¶</a></h1><h2 id="Filtering">Filtering<a class="anchor-link" href="#Filtering">¶</a></h2><p>You can keep some elements by subsetting by <em>filtering</em>, as we used to do in common pandas data frames.</p>
 </div>
 </div>
 </div>
@@ -7753,6 +7744,17 @@ a.anchor-link {
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=be643505-1c8f-435c-b3ca-150aee9c4b3b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Clipping">Clipping<a class="anchor-link" href="#Clipping">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5b602bc2-9264-46ac-8b8a-b3a71514096e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7778,24 +7780,13 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=be643505-1c8f-435c-b3ca-150aee9c4b3b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Clipping">Clipping<a class="anchor-link" href="#Clipping">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=01e11a63-f60d-46b7-90b3-29f8e554227f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>But you can also subset by <em>clipping</em>, as sometimes other data frames may not have the same fields for filtering:</p>
+<p>As we saw last week, we  can also subset by <em>clipping</em>, as sometimes other data frames may not have the same fields for filtering:</p>
 </div>
 </div>
 </div>
@@ -7878,974 +7869,12 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Exercise-1">Exercise 1<a class="anchor-link" href="#Exercise-1">¶</a></h3><div class="alert-success">
+<p>You will make two maps:</p>
 <ol>
-<li>Follow the same steps in this last section to plot three maps of one country. Do not use Brazil.</li>
-<li>Plot your three layers.</li>
+<li>Plot your country as the background. Use <strong>cx</strong> to plot the cities (or other points - i.e. airports) below the centroid.</li>
+<li>Plot your country as the background. Select with <strong>cx</strong> all the first administrative divisions above the centroid. Then, use clip to show the rivers that cross those divisions.</li>
 </ol>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=acfb54f3-247c-4a37-a049-7fdbba2653d4">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><a href="#0">TOC</a></p>
-<hr/>
-<p><a class="anchor" id="2"></a></p>
-<h1 id="Map-Projection">Map Projection<a class="anchor-link" href="#Map-Projection">¶</a></h1><p>The CRS is a very important property of the maps. They affect three some aspects:</p>
-<ul>
-<li>shape</li>
-<li>area</li>
-<li>scale</li>
-<li>direction</li>
-</ul>
-<p>Most maps come with a default CRS: 4326. Pay attention:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=032135e2-edb7-42fd-908e-8873d3e6683e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil</span><span class="o">.</span><span class="n">crs</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d6125ed3-d5da-46ed-b530-532a30ec35f8">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># check units of measurement</span>
-<span class="n">brazil</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">axis_info</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7b4fa59a-25e3-4ef2-8b2e-9e868d92c5a1">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># is this CRS projected?</span>
-<span class="n">brazil</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">is_projected</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2005d64e-0437-4b66-8f93-e170ffe5f1d1">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Polygons have a centroid. When we try getting a centroid from an <strong>unprojected</strong> polygon, you get:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d1dde3fd-bfcb-4004-89fa-2c9bb3f8d784">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># centroid</span>
-<span class="n">brazil</span><span class="o">.</span><span class="n">centroid</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a182ba5b-fb0a-4c43-beeb-0a6c2a4fcfc8">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Reprojecting">Reprojecting<a class="anchor-link" href="#Reprojecting">¶</a></h2><p>A projected CRS will have units in meters or feet (or similar). You can request a crs per country <a href="https://epsg.io/?q=brazil+kind%3APROJCRS">here</a>:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8c63293a-d9a0-4869-a7e8-7fbe2f4bbb59">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># recommended for Brazil (meters)</span>
-<span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5641</span><span class="p">)</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">axis_info</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=3c24db6e-8716-4f59-9a81-fead758b59e6">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># now this works with no warning</span>
-<span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5641</span><span class="p">)</span><span class="o">.</span><span class="n">centroid</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7c8e31a4-54d4-4c95-adb7-81b1466e9938">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># replotting:</span>
-
-<span class="n">base5641</span><span class="o">=</span><span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5641</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-<span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5641</span><span class="p">)</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">base5641</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7402b0e4-fda8-431b-ad8d-62e0c12278f6">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Let's keep the projected version for all our maps:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=71d42ed2-f296-480a-b603-7213575761c6">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_5641</span><span class="o">=</span><span class="n">brazil</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5641</span><span class="p">)</span>
-<span class="n">cities_brazil_5641</span><span class="o">=</span><span class="n">citiesBrazil_clipped</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">brazil_5641</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
-<span class="n">rivers_brazil_5641</span><span class="o">=</span><span class="n">riversBrazil_clipped</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">brazil_5641</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2f54a006-ca29-43db-9942-fdfa5c38e075">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">## saving</span>
-
-
-<span class="kn">import</span> <span class="nn">os</span>
-
-<span class="n">brazil_5641</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"maps"</span><span class="p">,</span><span class="s2">"brazilMaps_5641.gpkg"</span><span class="p">),</span> <span class="n">layer</span><span class="o">=</span><span class="s1">'country'</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="s2">"GPKG"</span><span class="p">)</span>
-<span class="n">cities_brazil_5641</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"maps"</span><span class="p">,</span><span class="s2">"brazilMaps_5641.gpkg"</span><span class="p">),</span> <span class="n">layer</span><span class="o">=</span><span class="s1">'cities'</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="s2">"GPKG"</span><span class="p">)</span>
-<span class="n">rivers_brazil_5641</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"maps"</span><span class="p">,</span><span class="s2">"brazilMaps_5641.gpkg"</span><span class="p">),</span> <span class="n">layer</span><span class="o">=</span><span class="s1">'rivers'</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="s2">"GPKG"</span><span class="p">)</span>
-<span class="n">brazil_5641</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"maps"</span><span class="p">,</span><span class="s2">"brazilMaps_5641.gpkg"</span><span class="p">),</span> <span class="n">layer</span><span class="o">=</span><span class="s1">'centroid'</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="s2">"GPKG"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=67c0b63b-c198-4b76-8f24-68f2f4e24ccf">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Exercise-2">Exercise 2<a class="anchor-link" href="#Exercise-2">¶</a></h3><div class="alert-success">
-<ol>
-<li>Reproject your country's map layers.</li>
-<li>Plot the reprojected layers</li>
-<li>Save the reprojected layers</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=57780f1f-2c19-49b4-8fbe-b3cc954a83f2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Creating-Spatial-data">Creating Spatial data<a class="anchor-link" href="#Creating-Spatial-data">¶</a></h2><p>You will get Lines and Polygons as maps for sure, but that may not be the case with points. Let's open the <strong>CSV</strong> with information on the airports in Brazil:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c95003f5-30f7-4941-85d1-fd2d87743c80">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">infoairports</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span><span class="s2">"br-airports.csv"</span><span class="p">))</span>
-
-<span class="c1"># some rows</span>
-
-<span class="n">infoairports</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],:]</span> <span class="c1">#head and tail</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=186b6ca4-e5f0-4502-91b4-dea1021fcdd2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>This needs some cleaning:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=faf009a8-7a75-461c-ba05-0e5760c971ff">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># bye first row</span>
-<span class="n">infoairports</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">infoairports</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">infoairports</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5d857678-c28e-4988-86b4-2ee6b11efdba">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># keep the  columns needed</span>
-
-<span class="n">infoairports</span><span class="o">.</span><span class="n">columns</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=22dd51af-cad6-4aa3-843d-f2dbadefb990">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">keep</span><span class="o">=</span><span class="p">[</span><span class="s1">'name'</span><span class="p">,</span><span class="s1">'type'</span><span class="p">,</span><span class="s1">'latitude_deg'</span><span class="p">,</span> <span class="s1">'longitude_deg'</span><span class="p">,</span><span class="s1">'elevation_ft'</span><span class="p">,</span><span class="s1">'region_name'</span><span class="p">,</span><span class="s1">'municipality'</span><span class="p">]</span>
-<span class="n">infoairports</span><span class="o">=</span><span class="n">infoairports</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">keep</span><span class="p">]</span>
-
-<span class="n">infoairports</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a9f96cbf-6d53-45d1-9c5d-e236d6e3e652">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Some formatting:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b4cb8ee0-18a7-40c1-864b-cbc8086861c8">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">numericCols</span><span class="o">=</span><span class="p">[</span><span class="s1">'latitude_deg'</span><span class="p">,</span> <span class="s1">'longitude_deg'</span><span class="p">,</span><span class="s1">'elevation_ft'</span><span class="p">]</span>
-<span class="n">infoairports</span><span class="p">[</span><span class="n">numericCols</span><span class="p">]</span><span class="o">=</span><span class="n">infoairports</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">numericCols</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4e7f0d14-934f-4465-b42f-d0c60efb6d32">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># now</span>
-<span class="n">infoairports</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b340ab20-2258-41a2-bbd4-6b6c31d422a0">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># let's plot</span>
-
-<span class="n">base</span> <span class="o">=</span> <span class="n">brazil_5641</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span> <span class="c1">#unprojected</span>
-
-<span class="n">infoairports</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">'longitude_deg'</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">'latitude_deg'</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">base</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=77acc474-bb83-4174-9579-a8a641ff6adc">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Why is it wrong?</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7b04453e-c335-4857-8fff-6a26c2daf730">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">airports</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">infoairports</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span>
-                 <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">infoairports</span><span class="o">.</span><span class="n">longitude_deg</span><span class="p">,</span>
-                                             <span class="n">infoairports</span><span class="o">.</span><span class="n">latitude_deg</span><span class="p">),</span>
-                 <span class="n">crs</span><span class="o">=</span><span class="n">brazil</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">to_epsg</span><span class="p">())</span><span class="c1"># the coordinates were in degrees - unprojected</span>
-
-<span class="c1"># let's plot</span>
-
-<span class="n">base</span> <span class="o">=</span> <span class="n">brazil_5641</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
-<span class="n">airports</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">base</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=755fb348-f7a6-4383-bd1c-54195e23eea2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#remember:</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">airports</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">infoairports</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1bfd9c61-b4cf-4de2-8d65-cfce0f82a8a2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Let's re project!</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a6791c26-5306-4cc3-86cb-8a42fba88276">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">airports_5641</span><span class="o">=</span><span class="n">airports</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5641</span><span class="p">)</span>
-
-<span class="c1">## then</span>
-
-<span class="n">base</span> <span class="o">=</span> <span class="n">brazil_5641</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
-<span class="n">airports_5641</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">base</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=980c890f-bcdb-4a11-b926-f587df9cace2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Remember you have type of airports:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5d44ab9b-d949-4976-af37-5b80786459f3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">airports_5641</span><span class="p">[</span><span class="s1">'type'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="c1"># this will not work: airports.type.value_counts()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d6e6386d-2636-4194-a79b-594ece5958d0">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>We may use that in the future. For now, just rename the <strong>type</strong> column to a different one.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=576e913d-62e9-45a0-ba8c-58ba2504a052">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">airports_5641</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'type'</span><span class="p">:</span><span class="s1">'kind'</span><span class="p">},</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1">## adding the airports to GPKG</span>
-<span class="n">airports_5641</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"maps"</span><span class="p">,</span><span class="s2">"brazilMaps_5641.gpkg"</span><span class="p">),</span> <span class="n">layer</span><span class="o">=</span><span class="s1">'airports'</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="s2">"GPKG"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=90565e2b-836a-4495-95da-2b722ae43b5d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Exercise-3">Exercise 3<a class="anchor-link" href="#Exercise-3">¶</a></h3><div class="alert-success">
-<ol>
-<li>Find the airports for your country <a href="https://ourairports.com/data/">here</a>. The data is in a CSV file.</li>
-<li>Create projected layer of airports.</li>
-<li>Plot all the layers and airports on top.</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1a244be3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><a class="anchor" id="11"></a></p>
-<h2 id="Formating-Geoseries-projections">Formating Geoseries projections<a class="anchor-link" href="#Formating-Geoseries-projections">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=56f39f71">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>You know <strong>brazil_5641</strong> is a multipolygon:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0c0f557c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_5641</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a1623e72">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Sometime, you just need the border (lines):</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=39db903a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_5641</span><span class="o">.</span><span class="n">boundary</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ef42fd87">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># This is just the borderline</span>
-<span class="n">brazil_5641</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=24f53d89">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Always check the data type:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a18b7ce2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># does 'boundary' return a GDF?</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">brazil_5641</span><span class="o">.</span><span class="n">boundary</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5b3845aa">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Some operations in geopandas require GDF or GS. If you need a GDF instead of a GS:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c4899f6e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># converting into GDF</span>
-<span class="n">brazil_5641</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ee31770d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Notice you get a very simple GDF, and you may want to add some information:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=1aa88edb">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># conversion</span>
-<span class="n">brazil_border</span><span class="o">=</span><span class="n">brazil_5641</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span> 
-
-<span class="c1"># new column (optional)</span>
-<span class="n">brazil_border</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span><span class="o">=</span><span class="s1">'Brazil'</span> 
-
-<span class="c1"># renaming the geometry column</span>
-<span class="n">brazil_border</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">'geometry'</span><span class="p">},</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
-
-<span class="c1">#setting the geometry (the name is not enough)</span>
-<span class="n">brazil_border</span> <span class="o">=</span> <span class="n">brazil_border</span><span class="o">.</span><span class="n">set_geometry</span><span class="p">(</span><span class="s2">"geometry"</span><span class="p">)</span>
-
-<span class="c1"># verifying:</span>
-<span class="n">brazil_border</span><span class="o">.</span><span class="n">crs</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=56253f89">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>You can add this GDF as a layer.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a1a60dee">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Exercise-4">Exercise 4<a class="anchor-link" href="#Exercise-4">¶</a></h3><div class="alert-success">
-<ol>
-<li><p>Check if your country is a polygon or multipolygon.</p>
-</li>
-<li><p>Recover just the boundaries of that country.</p>
-</li>
-<li><p>Turn the boundary into a GDF.</p>
-</li></ol></div>
-
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2c049934">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><a class="anchor" id="12"></a></p>
-<h2 id="Maps-Lacking-CRS-information">Maps Lacking CRS information<a class="anchor-link" href="#Maps-Lacking-CRS-information">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ae03899d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Reprojecting seems a simple process, but you might find some interesting cases. Let's read the maps on <em>states</em> and <em>municipalities</em>:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8f1ffae0">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_states</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"maps"</span><span class="p">,</span><span class="s2">"bra_adm_ibge_2020_shp"</span><span class="p">,</span><span class="s2">"bra_admbnda_adm1_ibge_2020.shp"</span><span class="p">))</span>
-<span class="n">brazil_municipalities</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"maps"</span><span class="p">,</span><span class="s2">"bra_adm_ibge_2020_shp"</span><span class="p">,</span><span class="s2">"bra_admbnda_adm2_ibge_2020.shp"</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=04c40df3-a43f-4252-a589-ab8449fcd9dd">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>They are maps, for sure:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c94b207d-0723-4b51-82ff-0ff999a844ac">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">brazil_states</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">brazil_municipalities</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b8871df8-0f49-4ef7-9c0f-c6eb7aa3205d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_states</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ca1bb428-8608-44b0-ad0a-fa5a6a1f5a61">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1fc50b42">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>But, notice this:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=fcf97ff7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_states</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span> <span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">crs</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d5d3fb9f">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>They do not have crs information, however they can be plotted:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=55f99615">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
-
-<span class="n">brazil_states</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">'lightgrey'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
-<span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">'lightgrey'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1b744542">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Since we are using the crs 5641 for Brazil, the initial strategy could be to set the CRS with the right projection :</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=931bfad1">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_states</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5641</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4c6125eb">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Python says <em>"Please set a crs on the object first"</em>. This would mean to know the actual projection, of the geometry:</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=947b1955">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>From the plots above and the rows seen, we conclude the maps are unprojected; then:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b0cea549">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># set as unprojected</span>
-<span class="n">brazil_states</span><span class="o">.</span><span class="n">crs</span> <span class="o">=</span> <span class="s2">"EPSG:4326"</span>
-<span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">crs</span> <span class="o">=</span> <span class="s2">"EPSG:4326"</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=370b9b22">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Now, we can reproject:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b5931b04">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_states</span><span class="o">=</span><span class="n">brazil_states</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5641</span><span class="p">)</span>
-<span class="n">brazil_municipalities</span><span class="o">=</span><span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">5641</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4bd63172">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Exercise-5-(conditional)">Exercise 5 (conditional)<a class="anchor-link" href="#Exercise-5-(conditional)">¶</a></h3><div class="alert-success">
-<ol>
-<li>Look for sub administrative divisions of your country</li>
-<li>Check all the CRSs of those divisions</li>
-<li>If you find one CRS is missing, fill the CRS with the right projection.</li></ol></div>
-
-
 </div>
 </div>
 </div>
@@ -8859,11 +7888,11 @@ a.anchor-link {
 <p><a href="#0">TOC</a></p>
 <hr/>
 <p><a class="anchor" id="3"></a></p>
-<h1 id="Combining-GeoDF-rows">Combining GeoDF rows<a class="anchor-link" href="#Combining-GeoDF-rows">¶</a></h1><p>Let me divide Brazil municipalities into a higher administrative level:</p>
+<h1 id="Combining-GeoDF-rows">Combining GeoDF rows<a class="anchor-link" href="#Combining-GeoDF-rows">¶</a></h1><p>Let me bring the projected data from Brazil.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=29d9a850-40fc-4e1e-a7a0-1c4ada8cb545">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=32827eb6-2450-4210-bec0-c45032769605">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8871,7 +7900,35 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'lightgrey'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">LinkBrazil</span><span class="o">=</span><span class="s2">"https://github.com/CienciaDeDatosEspacial/intro_geodataframe/raw/refs/heads/main/maps/brazilMaps_5641.gpkg"</span>
+<span class="c1">## we have</span>
+<span class="n">listlayers</span><span class="p">(</span><span class="n">LinkBrazil</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=099c9940-1d68-4524-8494-91236904510e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Let me open municipalities:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ff834b0d-e7e8-434f-a293-7c3ca2e3490a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_municipalities</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">LinkBrazil</span><span class="p">,</span><span class="n">layer</span><span class="o">=</span><span class="s1">'municipalities'</span><span class="p">)</span>
+<span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'lightgrey'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8892,6 +7949,21 @@ a.anchor-link {
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=05e89ed8-5095-46b6-a59f-c0248047fdcf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">## we have</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">ADM2_PT</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=edc01a89-ae84-405d-82e8-0ba1da113a00">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8900,8 +7972,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># higher level</span>
-<span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">ADM1_PT</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># higher level count</span>
+<span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">ADM1_PT</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -8933,6 +8005,17 @@ a.anchor-link {
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e0ec0e20-de35-444b-9b20-daff26825402">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Let's see the options to combine:</p>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=97eadc14-d617-4345-ad89-1eb2b786d31f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8951,7 +8034,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_municipalities</span><span class="p">[</span><span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">ADM1_PT</span><span class="o">==</span><span class="s1">'Minas Gerais'</span><span class="p">]</span><span class="o">.</span><span class="n">unary_union</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_municipalities</span><span class="p">[</span><span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">ADM1_PT</span><span class="o">==</span><span class="s1">'Minas Gerais'</span><span class="p">]</span><span class="o">.</span><span class="n">union_all</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -8976,7 +8059,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">MinasGerais_union</span><span class="o">=</span><span class="n">brazil_municipalities</span><span class="p">[</span><span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">ADM1_PT</span><span class="o">==</span><span class="s1">'Minas Gerais'</span><span class="p">]</span><span class="o">.</span><span class="n">unary_union</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">MinasGerais_union</span><span class="o">=</span><span class="n">brazil_municipalities</span><span class="p">[</span><span class="n">brazil_municipalities</span><span class="o">.</span><span class="n">ADM1_PT</span><span class="o">==</span><span class="s1">'Minas Gerais'</span><span class="p">]</span><span class="o">.</span><span class="n">union_all</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -9233,12 +8316,10 @@ However, if you have a column that represents a grouping (as we do), you can dis
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Exercise-6">Exercise 6<a class="anchor-link" href="#Exercise-6">¶</a></h2><div class="alert-success">
+<h2 id="Exercise-2">Exercise 2<a class="anchor-link" href="#Exercise-2">¶</a></h2><div class="alert-success">
 <ol>
-<li>Create some subset of polygons with your country data.</li>
-<li>Use Unary UNION with those  polygons.</li>
-<li>Create a geoDF with the result.</li>
-<li>Use dissolve with the same polygons, and create a geoDF.</li>
+<li>Create some subset of polygons with your country data at the municipal (or similar level). Use Unary UNION with those  polygons, and create a geoDF with the result.</li>
+<li>Dissolve your municipalities by another higher level administrative level. Plot the result.</li>
 </ol>
 </div>
 </div>
@@ -9390,7 +8471,8 @@ However, if you have a column that represents a grouping (as we do), you can dis
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_5641</span><span class="o">.</span><span class="n">centroid</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">brazil_5641</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">LinkBrazil</span><span class="p">,</span><span class="n">layer</span><span class="o">=</span><span class="s1">'country'</span><span class="p">)</span>
+<span class="n">brazil_5641</span><span class="o">.</span><span class="n">centroid</span>
 </pre></div>
 </div>
 </div>
@@ -9411,6 +8493,17 @@ However, if you have a column that represents a grouping (as we do), you can dis
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0b565daa-4e4e-4901-a1c0-51cc0545a48e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Let me open the airports:</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=eb203997-8c36-4a17-a5a7-f80ccd3ad0e7">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9419,9 +8512,21 @@ However, if you have a column that represents a grouping (as we do), you can dis
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">airports_5641</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">airports_5641</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">LinkBrazil</span><span class="p">,</span><span class="n">layer</span><span class="o">=</span><span class="s1">'airports'</span><span class="p">)</span>
+<span class="n">airports_5641</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=36dd3b3a-6ac1-4ef1-a5ab-43de7baff144">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Now, let me plot some airports, using the centroid:</p>
 </div>
 </div>
 </div>
@@ -9506,7 +8611,7 @@ However, if you have a column that represents a grouping (as we do), you can dis
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>In this situation, you can not make a <em>convex hull</em>:</p>
+<p>In this situation, you can NOT make a <em>convex hull</em>:</p>
 </div>
 </div>
 </div>
@@ -9531,7 +8636,7 @@ However, if you have a column that represents a grouping (as we do), you can dis
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>You first need to dissolve, and then you create a hull, an envelope of  convex angles:</p>
+<p>You first need to <strong>dissolve</strong>, and then you create a hull, an envelope of  convex angles:</p>
 </div>
 </div>
 </div>
@@ -9621,7 +8726,7 @@ However, if you have a column that represents a grouping (as we do), you can dis
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># just the union</span>
 <span class="n">large_airport</span><span class="o">=</span><span class="n">airports_5641</span><span class="p">[</span><span class="n">airports_5641</span><span class="o">.</span><span class="n">kind</span><span class="o">==</span><span class="s1">'large_airport'</span><span class="p">]</span>
-<span class="n">large_airport</span><span class="o">.</span><span class="n">unary_union</span>
+<span class="n">large_airport</span><span class="o">.</span><span class="n">union_all</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -9636,7 +8741,7 @@ However, if you have a column that represents a grouping (as we do), you can dis
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># hull of the union</span>
-<span class="n">large_airport</span><span class="o">.</span><span class="n">unary_union</span><span class="o">.</span><span class="n">convex_hull</span>
+<span class="n">large_airport</span><span class="o">.</span><span class="n">union_all</span><span class="p">()</span><span class="o">.</span><span class="n">convex_hull</span>
 </pre></div>
 </div>
 </div>
@@ -9663,7 +8768,7 @@ However, if you have a column that represents a grouping (as we do), you can dis
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">LargeAirport_hull</span><span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
                                     <span class="n">crs</span><span class="o">=</span><span class="n">large_airport</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span>
-                                    <span class="n">geometry</span><span class="o">=</span><span class="p">[</span><span class="n">large_airport</span><span class="o">.</span><span class="n">unary_union</span><span class="o">.</span><span class="n">convex_hull</span><span class="p">])</span>
+                                    <span class="n">geometry</span><span class="o">=</span><span class="p">[</span><span class="n">large_airport</span><span class="o">.</span><span class="n">union_all</span><span class="p">()</span><span class="o">.</span><span class="n">convex_hull</span><span class="p">])</span>
 <span class="n">LargeAirport_hull</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span><span class="o">=</span><span class="s1">'large airports hull'</span> <span class="c1"># optional</span>
 
 <span class="c1"># then</span>
@@ -9710,7 +8815,7 @@ However, if you have a column that represents a grouping (as we do), you can dis
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Exercise-7">Exercise 7<a class="anchor-link" href="#Exercise-7">¶</a></h3><div class="alert-success">
+<h3 id="Exercise-3">Exercise 3<a class="anchor-link" href="#Exercise-3">¶</a></h3><div class="alert-success">
 <ol>
 <li><p>Select some points from your maps.</p>
 </li>
@@ -9943,7 +9048,7 @@ However, if you have a column that represents a grouping (as we do), you can dis
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># now </span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># now</span>
 <span class="n">munisNS_brazil</span><span class="o">.</span><span class="n">overlay</span><span class="p">(</span><span class="n">munisWE_brazil</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s2">"union"</span><span class="p">,</span><span class="n">keep_geom_type</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -9970,6 +9075,8 @@ However, if you have a column that represents a grouping (as we do), you can dis
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># appending</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
 <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">munisNS_brazil</span><span class="p">,</span><span class="n">munisWE_brazil</span><span class="p">],</span><span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -10038,7 +9145,7 @@ However, if you have a column that represents a grouping (as we do), you can dis
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># some cleaning</span>
 
 <span class="n">muniMidBrazil</span><span class="p">[</span><span class="s1">'zone'</span><span class="p">]</span><span class="o">=</span><span class="s1">'middles'</span>
-<span class="n">muniMidBrazil</span><span class="o">=</span><span class="n">muniMidBrazil</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">'ADM0_EN_1_1'</span><span class="p">,</span><span class="s1">'zone'</span><span class="p">,</span><span class="s1">'geometry'</span><span class="p">]]</span>   
+<span class="n">muniMidBrazil</span><span class="o">=</span><span class="n">muniMidBrazil</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">'ADM0_EN_1_1'</span><span class="p">,</span><span class="s1">'zone'</span><span class="p">,</span><span class="s1">'geometry'</span><span class="p">]]</span>
 <span class="n">muniMidBrazil</span>
 </pre></div>
 </div>
@@ -10128,49 +9235,8 @@ However, if you have a column that represents a grouping (as we do), you can dis
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Exercise-8">Exercise 8<a class="anchor-link" href="#Exercise-8">¶</a></h1><div class="alert-success">
-<ol>
-<li>Apply two of these operations to your maps.</li>
-<li>Apply two of these operations to the  next maps:</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=04d400c9-7614-4022-8861-a061373b08c0">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># hulls for the mid size airports:</span>
-<span class="n">Brazil_AirTopLeft_hull</span><span class="o">=</span><span class="n">Brazil_AirTopLeft</span><span class="o">.</span><span class="n">dissolve</span><span class="p">()</span><span class="o">.</span><span class="n">convex_hull</span>
-<span class="n">Brazil_AirTopRight_hull</span><span class="o">=</span><span class="n">Brazil_AirTopRight</span><span class="o">.</span><span class="n">dissolve</span><span class="p">()</span><span class="o">.</span><span class="n">convex_hull</span>
-<span class="n">Brazil_AirBottomLeft_hull</span><span class="o">=</span><span class="n">Brazil_AirBottomLeft</span><span class="o">.</span><span class="n">dissolve</span><span class="p">()</span><span class="o">.</span><span class="n">convex_hull</span>
-<span class="n">Brazil_AirBottomRight_hull</span><span class="o">=</span><span class="n">Brazil_AirBottomRight</span><span class="o">.</span><span class="n">dissolve</span><span class="p">()</span><span class="o">.</span><span class="n">convex_hull</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e6e2be5b-7cc8-47e4-803f-fec8601a8fd6">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">base</span> <span class="o">=</span> <span class="n">brazil_5641</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span> <span class="c1">#unprojected</span>
-<span class="n">muniMidBrazil</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">base</span><span class="p">,</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'magenta'</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span> <span class="c1">#unprojected</span>
-<span class="n">LargeAirport_hull</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">base</span><span class="p">,</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'purple'</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
-<span class="n">Brazil_AirTopLeft_hull</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">base</span><span class="p">,</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
-<span class="n">Brazil_AirTopRight_hull</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">base</span><span class="p">,</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'orange'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
-<span class="n">Brazil_AirBottomLeft_hull</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">base</span><span class="p">,</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'green'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
-<span class="n">Brazil_AirBottomRight_hull</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">base</span><span class="p">,</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
-</pre></div>
+<h1 id="Exercise-4">Exercise 4<a class="anchor-link" href="#Exercise-4">¶</a></h1><div class="alert-success">
+<p>Apply two spatial overlays to your maps.</p>
 </div>
 </div>
 </div>
@@ -10319,20 +9385,6 @@ Let's check if our recent maps on states and municipalities are valid:</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>However, the pressence of collections may be troublesome in shapefiles.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c7c059e5-616e-4cc2-b114-0b1438af8afe">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
 </div>
 </div>
 </div>
